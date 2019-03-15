@@ -1,0 +1,20 @@
+<!-- https://ejs.co/#install  แถบ Layouts -->
+
+    <%-include("partials/header")-%>
+      <h1>Home</h1>
+      <p><%=startContent%></p>  
+      
+    
+      <%postss.forEach(function(post){%>
+        <%console.log(post.tittle+" "+post.content)%>
+        <h1><%=post.tittle%></h1>
+        <p><%=post.content.substring(0,100)+"..."%>
+          <a href="/posts/<%=post.tittle%>">Read More</a> 
+        </p>
+        
+      <%})%>
+        
+     
+     
+    
+    <%-include("partials/footer")-%>
